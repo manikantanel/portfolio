@@ -24,7 +24,8 @@
 
 <body>
 
-    
+    <button class="menu-toggle" onclick="document.querySelector('.right-nav').classList.toggle('active')">☰ Menu</button>
+
     <div class="scroll-dots">
   <a href="#about" title="About">🏠</a>
   <a href="#projects" title="Projects">📁</a>
@@ -234,5 +235,25 @@
   }
 
   window.addEventListener("load", typeEffect);
+
+   const navLinkss = document.querySelectorAll('.right-nav nav ul li a, .scroll-dots a');
+  const rightPanell = document.querySelector('.right-panel');
+  const navHeight = document.querySelector('.right-nav')?.offsetHeight || 60;
+
+  navLinkss.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href');
+      const section = document.querySelector(targetId);
+      if (section) {
+        const topOffset = section.offsetTop - navHeight;
+        rightPanell.scrollTo({
+          top: topOffset,
+          behavior: 'smooth'
+        });
+        document.querySelector('.right-nav').classList.remove('active'); // close mobile menu
+      }
+    });
+  });
 </script>
 </html>
