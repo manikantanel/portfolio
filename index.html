@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manikantan Eakiri Lakshmanan | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+    window.onload = () => {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') document.body.classList.add('dark');
+    };
+
+   
+  </script>
+</head>
+
+<body>
+
+    
+    <div class="scroll-dots">
+  <a href="#about" title="About">🏠</a>
+  <a href="#projects" title="Projects">📁</a>
+  <a href="#experience" title="Experience">💼</a>
+  <a href="#skills" title="Skills">🛠</a>
+  <a href="#contact" title="Contact">📬</a>
+</div>
+
+  <div class="left-panel">
+    <img src="Manikantan Eakiri Lakeshmanan.jpg" alt="Manikantan's photo">
+    <h1>Manikantan Eakiri Lakshmanan</h1>
+    <p class="typing" id="typing-text">Software Engineer | iOS & Web Developer</p>
+    <a href="mailto:me2083@rit.edu">me2083@rit.edu</a>
+    <br><br>
+    <a href="Mani_Resume_2025_Spring.pdf" download>📄 Download Resume</a>
+    <button class="theme-toggle" onclick="toggleDarkMode()">🌓 Toggle Theme</button>
+  </div>
+
+  <div class="right-panel">
+  <div class="right-nav">
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="social">
+        <a href="https://github.com/manikantanel" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        </li>
+        <li class="social">
+            <a href="https://www.linkedin.com/in/manikantan-eakiri-lakshmanan-a6a85b193" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+            </a>
+        </li>
+    </ul>
+    </nav>
+  </div>
+
+
+
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a Master's graduate in Software Engineering from RIT (May 2025), with a passion for building scalable and accessible systems. I specialize in full-stack development, iOS apps, and Human-Computer Interaction, especially for the Deaf community.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>ASL-to-Text Dictionary</h3>
+          <p>Real-time ASL gesture recognition using MediaPipe & TensorFlow.js.</p>
+        </div>
+        <div class="project-card">
+          <h3>Visitor Website</h3>
+          <p>Dynamic PHP/SQL/AJAX system with user booking and admin login.</p>
+        </div>
+        <div class="project-card">
+          <h3>MyPlus Learning</h3>
+          <p>Java/Spark web platform for accessible education with MySQL backend.</p>
+        </div>
+        <div class="project-card">
+          <h3>Author Promo Site</h3>
+          <p>HTML/CSS/JS responsive promotional site with clean layout.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>iOS App Developer – NTID, RIT</strong> (2023–2024): Developed accessible ASL educational app using SwiftUI.</li>
+        <li><strong>Data Analyst Intern – Accenture</strong> (2020): Created financial & training reports using Excel, VLOOKUP & Pivot Tables.</li>
+        <li><strong>Laptop Tester – Maven Tech</strong> (2024–Now): Diagnosed, repaired, and refurbished devices for resale.</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Programming Skills</h2>
+      <div class="skills-grid">
+        <div><img src="icons/html5.svg" alt="HTML5"><span>HTML5</span></div>
+        <div><img src="icons/css3.svg" alt="CSS3"><span>CSS3</span></div>
+        <div><img src="icons/js.svg" alt="JavaScript"><span>JavaScript</span></div>
+        <div><img src="icons/python.svg" alt="Python"><span>Python</span></div>
+        <div><img src="icons/java.svg" alt="Java"><span>Java</span></div>
+        <div><img src="icons/swift.svg" alt="Swift"><span>Swift</span></div>
+        <div><img src="icons/mysql.svg" alt="MySQL"><span>MySQL</span></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:me2083@rit.edu">me2083@rit.edu</a></p>
+      <p>Phone: +1 (585) 910-4644</p>
+      <p>GitHub:
+        <a href="https://github.com/manikantanel" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i> github.com/manikantanel
+        </a>
+      </p>
+      <p>LinkedIn:
+        <a href="https://www.linkedin.com/in/manikantan-eakiri-lakshmanan-a6a85b193" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i> linkedin.com/in/manikantan-eakiri-lakshmanan
+        </a>
+      </p>
+    </section>
+
+ 
+</section>
+</body>
+<script>
+    const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".left-panel nav ul li a, .right-nav nav ul li a");
+  const dotLinks = document.querySelectorAll(".scroll-dots a");
+  const rightPanel = document.querySelector(".right-panel");
+
+  function activateLinkOnScroll() {
+    let currentId = "";
+    let offsetMid = rightPanel.scrollTop + rightPanel.clientHeight / 2;
+
+    sections.forEach((section) => {
+      const id = section.getAttribute("id");
+      const offsetTop = section.offsetTop;
+      const offsetHeight = section.offsetHeight;
+
+      if (offsetMid >= offsetTop && offsetMid < offsetTop + offsetHeight) {
+        currentId = id;
+      }
+    });
+
+    if (currentId) {
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${currentId}`);
+      });
+
+      dotLinks.forEach((dot) => {
+        dot.classList.toggle("active", dot.getAttribute("href") === `#${currentId}`);
+      });
+    }
+  }
+
+  // Smooth scroll for nav links
+  navLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        rightPanel.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  // Smooth scroll for dot links
+  dotLinks.forEach(dot => {
+    dot.addEventListener("click", e => {
+      e.preventDefault();
+      const targetId = dot.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        rightPanel.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  rightPanel.addEventListener("scroll", activateLinkOnScroll);
+  window.addEventListener("load", activateLinkOnScroll);
+
+  const typingElement = document.getElementById("typing-text");
+  const roles = [
+    "Software Engineer",
+    "iOS App Developer",
+    "Full Stack Web Developer"
+  ];
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let typing = true;
+
+  function typeEffect() {
+    const currentText = roles[roleIndex];
+
+    if (typing) {
+      typingElement.textContent = currentText.substring(0, charIndex++);
+      if (charIndex > currentText.length) {
+        typing = false;
+        setTimeout(typeEffect, 1200); // pause before deleting
+        return;
+      }
+    } else {
+      typingElement.textContent = currentText.substring(0, charIndex--);
+      if (charIndex < 0) {
+        typing = true;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+    }
+
+    setTimeout(typeEffect, typing ? 100 : 50);
+  }
+
+  window.addEventListener("load", typeEffect);
+</script>
+</html>

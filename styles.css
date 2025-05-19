@@ -1,0 +1,464 @@
+/* Split-Screen Portfolio with Typing, Icons, GitHub Buttons & Card Animation */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+  display: flex;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.dark {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.left-panel {
+  background-color: #111;
+  width: 35%;
+  height: 100vh;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  transition: background-color 0.4s;
+  animation: slideLeftIn 1.2s ease-out both;
+  z-index: 10;
+}
+
+.left-panel img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  margin-bottom: 1.5rem;
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+.left-panel h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.left-panel .typing {
+  font-size: 2rem;
+  color: #00adee;
+  margin-bottom: 2rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00adee;
+}
+
+.left-panel a {
+  color: #00adee;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.left-panel a:hover {
+  color: #00e6e6;
+}
+
+.theme-toggle {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: #00adee;
+}
+
+.right-panel {
+  margin-left: 35%;
+  width: 65%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 3rem;
+  scroll-behavior: smooth;
+}
+
+.right-panel section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  padding: 4rem 4rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-nav {
+  position: sticky;
+  top: 0;
+  background: #1a1a1a;
+  z-index: 5;
+  padding: 1rem 4rem;
+}
+
+.right-nav nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.right-nav nav ul li a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+
+.right-nav nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.right-nav nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #00adee;
+  transition: width 0.3s;
+}
+
+.right-nav nav ul li a:hover::after,
+.right-nav nav ul li a.active::after {
+  width: 100%;
+}
+
+
+/* Other Styles Retained */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+nav ul li a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  height: 2px;
+  background: #00adee;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.left-panel nav ul li a.active {
+  color: #00e6e6;
+}
+.scroll-dots a.active {
+  background: #00adee;
+}
+
+ .scroll-dots {
+    position: fixed;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+  }
+
+  .scroll-dots a {
+    width: 24px;
+    height: 24px;
+    background: #888;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+    font-family: sans-serif;
+    position: relative;
+  }
+
+  .scroll-dots a::after {
+    content: attr(title);
+    position: absolute;
+    right: 120%;
+    background: #222;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .scroll-dots a:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-dots a.active {
+    background: #00adee;
+  }
+
+  @media (max-width: 768px) {
+    .scroll-dots {
+      display: none;
+    }
+  }
+
+
+
+section {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #00adee;
+  padding-bottom: 0.4rem;
+  color: #00adee;
+  text-transform: uppercase;
+}
+
+section p, section li {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #222;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, background 0.3s;
+  animation: fadeSlideUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  background: #2a2a2a;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #00adee;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.project-card a.button {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: #00adee;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project-card a.button:hover {
+  background: #009edc;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.skills-grid img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.skills-grid img:hover {
+  transform: scale(1.2);
+}
+
+.skills-grid span {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+footer.social-footer {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  background: #111;
+  border-top: 1px solid #333;
+  margin-top: 3rem;
+}
+
+footer.social-footer a {
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: #00adee;
+  transition: transform 0.3s;
+}
+
+footer.social-footer a:hover {
+  transform: scale(1.2);
+  color: #00caff;
+}
+
+
+/* Animations */
+/* Retain all prior animation and responsive styles here */
+
+/* Animations */
+@keyframes slideLeftIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRightIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatUpDown {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 240px; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    height: auto;
+  }
+
+  .left-panel {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  }
+}
+
