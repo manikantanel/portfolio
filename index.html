@@ -24,7 +24,7 @@
 
 <body>
 
-    <button class="menu-toggle" onclick="document.querySelector('.right-nav').classList.toggle('active')">☰ Menu</button>
+    <!-- <button class="menu-toggle" onclick="document.querySelector('.right-nav').classList.toggle('active')">☰ Menu</button> -->
 
     <div class="scroll-dots">
   <a href="#about" title="About">🏠</a>
@@ -38,10 +38,10 @@
     <img src="Manikantan Eakiri Lakeshmanan.jpg" alt="Manikantan's photo">
     <h1>Manikantan Eakiri Lakshmanan</h1>
     <p class="typing" id="typing-text">Software Engineer | iOS & Web Developer</p>
-    <a href="mailto:me2083@rit.edu">me2083@rit.edu</a>
+    <a href="mailto:me2083@rit.edu">manikantaneakiri@gmail.com</a>
     <br><br>
-    <a href="Mani_Resume_2025_Spring.pdf" download>📄 Download Resume</a>
-    <button class="theme-toggle" onclick="toggleDarkMode()">🌓 Toggle Theme</button>
+    <a href="Manikantan_Resume_EP.pdf" download>📄 Download Resume</a>
+    <!-- <button class="theme-toggle" onclick="toggleDarkMode()">🌓 Toggle Theme</button> -->
   </div>
 
   <div class="right-panel">
@@ -71,144 +71,472 @@
 
 
     <section id="about">
-      <h2>About Me</h2>
-      <p>I am a Master's graduate in Software Engineering from RIT (May 2025), with a passion for building scalable and accessible systems. I specialize in full-stack development, iOS apps, and Human-Computer Interaction, especially for the Deaf community.</p>
-    </section>
+  <div class="about-box">
+    <h2>About Me</h2>
+    <p>
+      I am a Deaf software engineer with a strong academic background and a deep passion for accessible, human-centered technology. 
+      I recently completed my <strong>Master of Science in Software Engineering</strong> from Rochester Institute of Technology (RIT) 
+      <strong>(2020–2025)</strong>, graduating with a <strong>GPA of 3.80</strong>.
+    </p>
+    <p>
+      I also earned an <strong>Associate in Applied Science in Applied Computer Technology</strong> from the 
+      <strong>National Technical Institute for the Deaf (NTID), RIT</strong> <strong>(2022–2024)</strong>, graduating 
+      <em>magna cum laude</em> with a <strong>GPA of 3.74</strong>.
+    </p>
+    <p>
+      Prior to studying in the U.S., I completed my <strong>Bachelor of Technology in Computer Science and Engineering</strong> 
+      in India <strong>(2015–2019)</strong> with a <strong>CGPA of 8.80 / 10</strong>.
+    </p>
+    <p>
+      I specialize in <strong>full-stack development</strong>, <strong>iOS mobile apps</strong>, and <strong>Human-Computer Interaction (HCI)</strong>, with a focus on building inclusive systems for the Deaf and Hard-of-Hearing community. My work combines performance, usability, and modern design using tools like React, Node.js, Swift, TensorFlow.js, Firebase, and Google Cloud.
+    </p>
+    <p><strong>📄 Verified Academic Credentials:</strong></p>
+<ul>
+  <li>🎓 
+    <a href="https://www.parchment.com/u/s/H37v" target="_blank" class="cred-links">
+      Master’s in Software Engineering (RIT, 2025)
+    </a> – GPA: 3.80
+  </li>
+  <li>🎓 
+    <a href="https://www.parchment.com/u/s/P1Xb" target="_blank" class="cred-links">
+      Associate’s in Applied Computer Technology (NTID, 2024)
+    </a> – GPA: 3.74
+  </li>
+</ul>
+  </div>
+</section>
+
 
     <section id="projects">
+      <div class="about-box">
       <h2>Projects</h2>
       <div class="project-grid">
-        <div class="project-card">
-          <h3>ASL-to-Text Dictionary</h3>
-          <p>Real-time ASL gesture recognition using MediaPipe & TensorFlow.js.</p>
-        </div>
-        <div class="project-card">
-          <h3>Visitor Website</h3>
-          <p>Dynamic PHP/SQL/AJAX system with user booking and admin login.</p>
-        </div>
-        <div class="project-card">
-          <h3>MyPlus Learning</h3>
-          <p>Java/Spark web platform for accessible education with MySQL backend.</p>
-        </div>
-        <div class="project-card">
-          <h3>Author Promo Site</h3>
-          <p>HTML/CSS/JS responsive promotional site with clean layout.</p>
-        </div>
+   <div class="project-card new-style">
+  <h3>🧠 ASL-to-Text Dictionary</h3>
+  <p>Real-time ASL gesture recognition web app using MediaPipe and TensorFlow.js, enabling Deaf users to translate ASL signs into English text.</p>
+
+  <div class="tech-badges">
+    <span>MediaPipe</span>
+    <span>TensorFlow.js</span>
+    <span>Flask</span>
+    <span>OpenCV</span>
+    <span>NumPy</span>
+  </div>
+
+  <ul class="project-highlights">
+    <li>Real-time webcam gesture capture with LSTM model</li>
+    <li>ASL gesture-to-text via trained deep learning model</li>
+    <li>Web-based client with Flask backend</li>
+  </ul>
+
+  <div class="project-links">
+    <a href="Add_Yes_No_ASL.mp4" target="_blank">▶️ Watch Demo Video</a>
+    <a href="System_Design_Capstone_7.png" target="_blank">🗺️ View System Architecture</a>
+    <a href="https://github.com/manikantanel/SWEN780Capstone" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</div>
+
+
+
+        <div class="project-card new-style">
+  <h3>🧾 Visitor Website</h3>
+  <p>
+    Dynamic PHP-based booking system with secure admin login and real-time updates using SQL and AJAX.
+  </p>
+
+  <div class="tech-badges">
+    <span>PHP</span>
+    <span>MySQL</span>
+    <span>AJAX</span>
+    <span>HTML</span>
+    <span>JavaScript</span>
+  </div>
+
+  <ul class="project-highlights">
+    <li>User registration and reservation forms</li>
+    <li>Admin dashboard with login protection</li>
+    <li>Database-driven availability updates</li>
+  </ul>
+
+  <div class="project-links">
+    <a href="https://github.com/manikantanel/Visitor-Website" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</div>
+        <div class="project-card new-style">
+  <h3>📘 MyPlus Learning</h3>
+  <p>
+    A Java-based educational platform built with Spark framework and MySQL, designed for accessible learning content and student tracking.
+  </p>
+
+  <div class="tech-badges">
+    <span>Java</span>
+    <span>Spark</span>
+    <span>MySQL</span>
+    <span>JSP</span>
+    <span>HTML</span>
+  </div>
+
+  <ul class="project-highlights">
+    <li>Custom course and quiz modules for students</li>
+    <li>MySQL-backed session tracking and feedback</li>
+    <li>Built with MVC design principles and REST routing</li>
+  </ul>
+
+  <div class="project-links">
+    <a href="https://github.com/Tarun-Mittal-cell/SCRUMptious-SWEN610-08-28-2020" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</div>
+
+<div class="project-card new-style">
+  <h3>🔐 Secure Session Management</h3>
+  <p>
+    A secure Java-based session handling system using custom hash generation, role validation, and session token tracking.
+    This web service authenticates users, manages sessions, and displays books based on user roles.
+  </p>
+
+  <div class="tech-badges">
+    <span>Java</span>
+    <span>Spring MVC</span>
+    <span>JSON</span>
+    <span>DAO</span>
+    <span>UML</span>
+  </div>
+
+  <ul class="project-highlights">
+    <li>Session hash creation and validation</li>
+    <li>Role-based page access enforcement</li>
+    <li>DAO pattern for user and session management</li>
+    <li>Secure login and token management</li>
+  </ul>
+
+  <div class="project-links">
+    <a href="ClassDiagram.png" target="_blank">📊 View Class Diagram</a>
+    <a href="https://github.com/manikantanel/SWEN-755/tree/main/homework6" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</div>
+
+<div class="project-card new-style">
+  <h3>🚗 Innovation in Car Software Systems</h3>
+  <p>
+    A multipage responsive website built with HTML, CSS, and JavaScript that explores the evolution, current innovations, and future of software in the automotive industry.
+  </p>
+
+  <div class="tech-badges">
+    <span>HTML5</span>
+    <span>CSS3</span>
+    <span>JavaScript</span>
+    <span>Responsive Design</span>
+    <span>UX Design</span>
+  </div>
+
+  <ul class="project-highlights">
+    <li>Features sections on history, innovation, and future of smart vehicles</li>
+    <li>Interactive navigation and animated sections</li>
+    <li>Fully responsive layout across desktop and mobile</li>
+  </ul>
+
+  <div class="project-links">
+    <a href="https://people.rit.edu/me2083/project1/" target="_blank">🌐 View Live Site</a>
+  </div>
+</div>
+
+
+
+        <div class="project-card new-style">
+  <h3>📘 ASL Alphabet for Beginners – Author Promo</h3>
+  <p>
+    A visually engaging HTML/CSS-based promotional website designed for a fictional ASL book author. Features a clean layout, image carousel, shop and contact links, and mobile-friendly navigation.
+  </p>
+
+  <div class="tech-badges">
+    <span>HTML5</span>
+    <span>CSS3</span>
+    <span>JavaScript</span>
+    <span>Responsive Layout</span>
+    <span>Carousel</span>
+  </div>
+
+  <ul class="project-highlights">
+    <li>Carousel displaying featured ASL books</li>
+    <li>Smooth navigation with responsive menu</li>
+    <li>Custom styling with clean author branding</li>
+  </ul>
+
+  <div class="project-links">
+    <a href="https://people.rit.edu/me2083/project%202/" target="_blank">🌐 View Live Site</a>
+  </div>
+</div>
+
+      </div>
       </div>
     </section>
 
     <section id="experience">
+      <div class="about-box">
       <h2>Experience</h2>
-      <ul>
-        <li><strong>iOS App Developer – NTID, RIT</strong> (2023–2024): Developed accessible ASL educational app using SwiftUI.</li>
-        <li><strong>Data Analyst Intern – Accenture</strong> (2020): Created financial & training reports using Excel, VLOOKUP & Pivot Tables.</li>
-        <li><strong>Laptop Tester – Maven Tech</strong> (2024–Now): Diagnosed, repaired, and refurbished devices for resale.</li>
-      </ul>
+       <div class="timeline-wrapper">
+
+    <div class="timeline-entry">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Full Stack Web Developer – Alphabet Inc</h3>
+        <h4>New York, USA | May 2024 – Present</h4>
+        <ul>
+          <li>Engineered a scalable web app with React.js & Node.js, improving performance by 35%</li>
+          <li>Optimized RESTful APIs to speed up data retrieval by 40%</li>
+          <li>Reduced deployment time by 50% using Docker and Jenkins</li>
+          <li>Enhanced UI with Tailwind CSS & React Hooks, increasing engagement by 25%</li>
+          <li>Automated backend via Google Cloud Functions, cutting manual work by 30%</li>
+          <li>Reduced deployment failures by 50% with Kubernetes integration</li>
+          <li>Improved test coverage by 60% using Jest & Cypress</li>
+          <li>Led cross-functional team for UI/UX development and consistency</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-entry">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>iOS App Developer – NTID, RIT</h3>
+        <h4>Rochester, NY | Jun 2023 – May 2024</h4>
+        <ul>
+          <li>Developed iOS app using Swift & SwiftUI, increasing efficiency by 45%</li>
+          <li>Integrated ML-based speech recognition, aiding Deaf users by 30%</li>
+          <li>Reduced memory & CPU usage by 40% with Swift optimizations</li>
+          <li>Enhanced navigation, improving task speed by 20%</li>
+          <li>Used Firebase auth & real-time DB to improve security by 35%</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-entry">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Student Research & Media Assistant – NTID, RIT</h3>
+        <h4>Rochester, NY | Jan 2023 – May 2023</h4>
+        <ul>
+          <li>Designed media tools for research, reducing manual work by 25%</li>
+          <li>Optimized engagement by 30% through data-driven design</li>
+          <li>Automated research scripts using Python, saving 40% of time</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-entry">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Full Stack Web Developer – IBM Corporation</h3>
+        <h4>India | Feb 2020 – Aug 2020</h4>
+        <ul>
+          <li>Built scalable microservices with Spring Boot & React.js</li>
+          <li>Reduced database query time by 40% with SQL/Mongo optimizations</li>
+          <li>Enhanced bug detection with automated Jest/Cypress tests</li>
+          <li>Implemented OAuth 2.0, improving system security by 20%</li>
+          <li>Delivered updates 2 weeks early through Agile collaboration</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
     </section>
 
-    <section id="skills">
-      <h2>Programming Skills</h2>
-      <div class="skills-grid">
-        <div><img src="icons/html5.svg" alt="HTML5"><span>HTML5</span></div>
-        <div><img src="icons/css3.svg" alt="CSS3"><span>CSS3</span></div>
-        <div><img src="icons/js.svg" alt="JavaScript"><span>JavaScript</span></div>
-        <div><img src="icons/python.svg" alt="Python"><span>Python</span></div>
-        <div><img src="icons/java.svg" alt="Java"><span>Java</span></div>
-        <div><img src="icons/swift.svg" alt="Swift"><span>Swift</span></div>
-        <div><img src="icons/mysql.svg" alt="MySQL"><span>MySQL</span></div>
+   <section id="skills">
+    <div class="about-box">
+  <h2>Skills & Expertise</h2>
+  <div class="project-grid">
+
+    <div class="project-card new-style">
+      <h3>💻 Programming Languages</h3>
+      <div class="tech-badges">
+        <span>Python</span><span>Java</span><span>JavaScript</span><span>Swift</span><span>PHP</span>
+        <span>Ruby</span><span>C</span><span>C#</span><span>C++</span><span>HTML5</span><span>CSS3</span><span>SQL</span><span>TypeScript</span>
       </div>
-    </section>
+    </div>
+
+    <div class="project-card new-style">
+      <h3>🛠️ Frameworks & Libraries</h3>
+      <div class="tech-badges">
+        <span>React.js</span><span>Node.js</span><span>Express.js</span><span>SwiftUI</span><span>Spring Boot</span>
+        <span>TensorFlow.js</span><span>Redux</span><span>Bootstrap</span><span>Tailwind CSS</span>
+      </div>
+    </div>
+
+    <div class="project-card new-style">
+      <h3>🗄️ Databases</h3>
+      <div class="tech-badges">
+        <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Firebase</span><span>Google BigQuery</span>
+      </div>
+    </div>
+
+    <div class="project-card new-style">
+      <h3>☁️ Cloud & DevOps</h3>
+      <div class="tech-badges">
+        <span>AWS</span><span>EC2</span><span>S3</span><span>Lambda</span><span>Google Cloud</span>
+        <span>Cloud Functions</span><span>Firestore</span><span>Azure</span><span>Docker</span>
+        <span>Kubernetes</span><span>CI/CD</span><span>Jenkins</span><span>GitHub Actions</span>
+      </div>
+    </div>
+
+    <div class="project-card new-style">
+      <h3>🧪 Software Testing</h3>
+      <div class="tech-badges">
+        <span>Jest</span><span>Cypress</span><span>Selenium</span><span>JUnit</span><span>Postman (API Testing)</span>
+      </div>
+    </div>
+
+    <div class="project-card new-style">
+      <h3>🔁 Version Control & Collaboration</h3>
+      <div class="tech-badges">
+        <span>Git</span><span>GitHub</span><span>GitLab</span><span>Bitbucket</span>
+        <span>Agile</span><span>Scrum</span><span>Kanban</span><span>Jira</span><span>Confluence</span>
+      </div>
+    </div>
+
+    <div class="project-card new-style">
+      <h3>📱 Mobile App Development</h3>
+      <div class="tech-badges">
+        <span>Swift (iOS)</span><span>React Native</span><span>Firebase Authentication</span><span>API Integration</span>
+      </div>
+    </div>
+
+    <div class="project-card new-style">
+      <h3>💻 Operating Systems</h3>
+      <div class="tech-badges">
+        <span>Windows (XP, 7, 8, 10, 11)</span><span>macOS</span><span>Linux</span><span>iOS</span><span>Android</span>
+      </div>
+    </div>
+
+    <div class="project-card new-style">
+      <h3>📊 Data Tools & Analytics</h3>
+      <div class="tech-badges">
+        <span>Google Looker</span><span>Power BI</span><span>Tableau</span><span>Pandas</span><span>NumPy</span>
+      </div>
+    </div>
+
+    <div class="project-card new-style">
+      <h3>🧰 Development Tools</h3>
+      <div class="tech-badges">
+        <span>IntelliJ IDEA</span><span>Visual Studio Code</span><span>Xcode</span><span>Postman</span><span>Microsoft Office Suite</span>
+      </div>
+    </div>
+</div>
+  </div>
+</section>
+
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:me2083@rit.edu">me2083@rit.edu</a></p>
-      <p>Phone: +1 (585) 910-4644</p>
-      <p>GitHub:
-        <a href="https://github.com/manikantanel" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i> github.com/manikantanel
-        </a>
-      </p>
-      <p>LinkedIn:
-        <a href="https://www.linkedin.com/in/manikantan-eakiri-lakshmanan-a6a85b193" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin"></i> linkedin.com/in/manikantan-eakiri-lakshmanan
-        </a>
-      </p>
-    </section>
+  <div class="about-box">
+    <h2>Contact</h2>
+    <hr style="border: 1px solid #00adee; margin-bottom: 1rem;" />
+
+    <p>
+      📧 <strong>Email:</strong>
+      <a href="mailto:manikantaneakiri@gmail.com" class="contact-link">
+        manikantaneakiri@gmail.com
+      </a>
+    </p>
+
+    <p>
+      📞 <strong>Phone:</strong>
+      <a href="tel:+15859104644" class="contact-link">
+        +1 (585) 910-4644
+      </a>
+    </p>
+
+    <p>
+  <i class="fab fa-github" style="color:#60a5fa;"></i>
+  <a href="https://github.com/manikantanel" target="_blank" class="contact-link">
+    github.com/manikantanel
+  </a>
+</p>
+
+<p>
+  <i class="fab fa-linkedin" style="color:#60a5fa;"></i>
+  <a href="https://linkedin.com/in/manikantan-eakiri-lakshmanan" target="_blank" class="contact-link">
+    linkedin.com/in/manikantan-eakiri-lakshmanan
+  </a>
+</p>
+  </div>
+</section>
+
 
  
 </section>
+<!-- Image Modal Viewer -->
+<div id="imageModal" class="image-modal" onclick="closeImageModal()">
+  <span class="close-btn">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
 </body>
 <script>
-    const sections = document.querySelectorAll("section[id]");
+  const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".left-panel nav ul li a, .right-nav nav ul li a");
   const dotLinks = document.querySelectorAll(".scroll-dots a");
   const rightPanel = document.querySelector(".right-panel");
+  const navHeight = document.querySelector('.right-nav')?.offsetHeight || 60;
 
   function activateLinkOnScroll() {
-    let currentId = "";
-    let offsetMid = rightPanel.scrollTop + rightPanel.clientHeight / 2;
+  let currentId = "";
 
-    sections.forEach((section) => {
-      const id = section.getAttribute("id");
-      const offsetTop = section.offsetTop;
-      const offsetHeight = section.offsetHeight;
+  const isMobile = window.innerWidth <= 768;
+  const scrollY = isMobile ? window.scrollY : rightPanel.scrollTop;
+  const viewportHeight = isMobile ? window.innerHeight : rightPanel.clientHeight;
+  const offsetMid = scrollY + viewportHeight / 2;
 
-      if (offsetMid >= offsetTop && offsetMid < offsetTop + offsetHeight) {
-        currentId = id;
-      }
+  sections.forEach((section) => {
+    const id = section.getAttribute("id");
+    const offsetTop = section.offsetTop;
+    const offsetHeight = section.offsetHeight;
+
+    if (offsetMid >= offsetTop && offsetMid < offsetTop + offsetHeight) {
+      currentId = id;
+    }
+  });
+
+  if (currentId) {
+    navLinks.forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${currentId}`);
     });
 
-    if (currentId) {
-      navLinks.forEach((link) => {
-        link.classList.toggle("active", link.getAttribute("href") === `#${currentId}`);
-      });
+    dotLinks.forEach((dot) => {
+      dot.classList.toggle("active", dot.getAttribute("href") === `#${currentId}`);
+    });
+  }
+}
 
-      dotLinks.forEach((dot) => {
-        dot.classList.toggle("active", dot.getAttribute("href") === `#${currentId}`);
-      });
+
+
+  function handleSmoothScroll(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href");
+    const targetEl = document.querySelector(targetId);
+    if (targetEl) {
+      const topOffset = targetEl.offsetTop - navHeight;
+      window.scrollTo({ top: topOffset, behavior: "smooth" });
     }
   }
 
-  // Smooth scroll for nav links
-  navLinks.forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const targetId = link.getAttribute("href");
-      const targetSection = document.querySelector(targetId);
-      if (targetSection) {
-        rightPanel.scrollTo({
-          top: targetSection.offsetTop,
-          behavior: "smooth"
-        });
-      }
-    });
+  [...navLinks, ...dotLinks].forEach(link => {
+    link.addEventListener("click", handleSmoothScroll);
   });
 
-  // Smooth scroll for dot links
-  dotLinks.forEach(dot => {
-    dot.addEventListener("click", e => {
-      e.preventDefault();
-      const targetId = dot.getAttribute("href");
-      const targetSection = document.querySelector(targetId);
-      if (targetSection) {
-        rightPanel.scrollTo({
-          top: targetSection.offsetTop,
-          behavior: "smooth"
-        });
-      }
-    });
-  });
+// Listen to scroll events on both containers
+rightPanel.addEventListener("scroll", activateLinkOnScroll);
+window.addEventListener("scroll", activateLinkOnScroll);
+window.addEventListener("load", activateLinkOnScroll);
 
-  rightPanel.addEventListener("scroll", activateLinkOnScroll);
-  window.addEventListener("load", activateLinkOnScroll);
 
   const typingElement = document.getElementById("typing-text");
-  const roles = [
-    "Software Engineer",
-    "iOS App Developer",
-    "Full Stack Web Developer"
-  ];
-
+  const roles = ["Software Engineer", "iOS App Developer", "Full Stack Web Developer"];
   let roleIndex = 0;
   let charIndex = 0;
   let typing = true;
@@ -220,7 +548,7 @@
       typingElement.textContent = currentText.substring(0, charIndex++);
       if (charIndex > currentText.length) {
         typing = false;
-        setTimeout(typeEffect, 1200); // pause before deleting
+        setTimeout(typeEffect, 500);
         return;
       }
     } else {
@@ -236,24 +564,16 @@
 
   window.addEventListener("load", typeEffect);
 
-   const navLinkss = document.querySelectorAll('.right-nav nav ul li a, .scroll-dots a');
-  const rightPanell = document.querySelector('.right-panel');
-  const navHeight = document.querySelector('.right-nav')?.offsetHeight || 60;
+  function openImageModal(src) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = src;
+  }
 
-  navLinkss.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href');
-      const section = document.querySelector(targetId);
-      if (section) {
-        const topOffset = section.offsetTop - navHeight;
-        rightPanell.scrollTo({
-          top: topOffset,
-          behavior: 'smooth'
-        });
-        document.querySelector('.right-nav').classList.remove('active'); // close mobile menu
-      }
-    });
-  });
+  function closeImageModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
 </script>
+
 </html>
