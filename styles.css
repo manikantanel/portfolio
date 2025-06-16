@@ -62,7 +62,7 @@ body::before {
   border-radius: 50%;
   box-shadow: 0 8px 16px rgba(0,0,0,0.5);
   margin-bottom: 1.5rem;
-  animation: floatUpDown 4s ease-in-out infinite;
+  /* animation: floatUpDown 4s ease-in-out infinite; */
 }
 
 .left-panel h1 {
@@ -74,7 +74,7 @@ body::before {
 
 .left-panel .typing {
   font-size: 2rem;
-  color: #62a862;
+  color: #d6d316;
   margin-bottom: 2rem;
   text-align: center;
   white-space: nowrap;
